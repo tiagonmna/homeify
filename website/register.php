@@ -78,7 +78,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
                 // Redirect to login page
-                header("location: /website/login.php");
+                header("location: login.php");
             } else {
                 echo "Oops! Something went wrong. Please try again later.";
             }
@@ -138,11 +138,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="container">
                 <div class="navbar-brand">
                     <span class="navbar-logo">
-                        <a href="/website/homeify_in.php">
+                        <a href="index_in.php">
                             <img src="assets/images/homeify-121x113.png" alt="" style="height: 3.8rem;">
                         </a>
                     </span>
-                    <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-7" href="/website/homeify_in.php">Homeify</a></span>
+                    <span class="navbar-caption-wrap"><a class="navbar-caption text-black text-primary display-7" href="index_in.php">Homeify</a></span>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <div class="hamburger">
@@ -159,7 +159,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         </li>
                         <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="agenda.php"><span class="far fa-fw fa-calendar mbr-iconfont mbr-iconfont-btn"></span>AGENDA</a></li>
                         <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="quem_somos_in.php" aria-expanded="false"><span class="material material-people mbr-iconfont mbr-iconfont-btn"></span>QUEM SOMOS</a></li>
-                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="/website/logout.php" aria-expanded="false"><span class="fas fa-fw fa-door-open mbr-iconfont mbr-iconfont-btn"></span>LOGOUT</a></li>
+                        <li class="nav-item"><a class="nav-link link text-black text-primary display-4" href="logout.php" aria-expanded="false"><span class="fas fa-fw fa-door-open mbr-iconfont mbr-iconfont-btn"></span>LOGOUT</a></li>
                     </ul>
 
 
