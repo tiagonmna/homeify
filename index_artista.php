@@ -2,18 +2,14 @@
 // Initialize the session
 session_start();
 
-// Check if the user is logged in, if not then redirect him to homeify logged in page
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: index.php");
+// Check if the user is logged in, if not then redirect him to homeify logged out page
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION["tipo"] !== "artista" ) {
+    header("location: index_in.php");
     exit;
-} elseif ($_SESSION["tipo"] == "fa") {
-    header("location: index_fa.php");
-    exit; 
-} elseif ($_SESSION["tipo"] == "artista") {
-    header("location: index_artista.php");
-    exit; 
 }
 ?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -58,12 +54,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
                             <li class="nav-item">
-                            
-                            <a class="nav-link link text-black text-primary display-4" href="index_in.php"><span class="material material-home mbr-iconfont mbr-iconfont-btn"></span>HOME</a>
-                            </li>
-                                    <a class="text-black text-primary dropdown-item display-4" href="artistas.php">ARTISTAS<br></a>
-                                    <a class="text-black text-primary dropdown-item display-4" href="fas.php" aria-expanded="false">FÃS</a>
-                                </div>
+                                <a class="nav-link link text-black text-primary display-4" href="index_in.php"><span class="material material-home mbr-iconfont mbr-iconfont-btn"></span>HOME</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link link text-black text-primary display-4" href="agenda_in.php"><span class="far fa-fw fa-calendar mbr-iconfont mbr-iconfont-btn"></span>AGENDA</a>
@@ -79,17 +70,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </div>
             </nav>
         </section>
-        <section class="header1 cid-s48MCQYojq mbr-fullscreen mbr-parallax-background" id="header1-f">
-            <div class="mbr-overlay" style="opacity: 0.8; background-color: rgb(255, 255, 255);"></div>
-            <div class="align-center container">
-                <div class="row justify-content-center">
+        <section class="d-flex header1" id="header1-f">
+            <img src="assets/images/valentimcarvalho1.jpg" class="h-auto position-absolute rounded-0 vw-100">
+            <div class="mbr-overlay" style="opacity: 0.5; background-color: rgb(255, 255, 255);"></div>
+            <div class="align-center container mb-2 mt-5">
+                <div class="justify-content-center mb-5 mt-5 row">
                     <div class="col-12 col-lg-8">
-                        <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1"><strong>E SE TE DESSEMOS MÚSICA EM CASA?</strong></h1>
+                        <h1 class="clearfix display-1 mbr-fonts-style mbr-section-title"><b>Prontos para o próximo concerto?</b></h1>
                         <p class="mbr-text mbr-fonts-style display-7">Na Homeify criámos um espaço para ti e para a música que gostas. Os melhores concertos não têm de ser nas grandes salas - connosco, podes ter a experiência toda a partir do sofá da tua casa.</p>
-                        <div class="mbr-section-btn mt-3">
-                            <a class="btn btn-secondary display-4" href="artistas.php">ARTISTAS</a> 
-                            <a class="btn btn-secondary display-4" href="fas.php">FÃS</a>
-                        </div>
                     </div>
                 </div>
             </div>
