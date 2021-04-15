@@ -12,8 +12,8 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 require_once "config.php";
 
 // Define variables and initialize with empty values
-$username = $password = "";
-$username_err = $password_err = $login_err = "";
+$username = $password = $tipo = "";
+$username_err = $password_err = $login_err = $tipo_err = "";
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate credentials
     if (empty($username_err) && empty($password_err)) {
         // Prepare a select statement
-        $sql = "SELECT id, username, password FROM users WHERE username = ?";
+        $sql = "SELECT id, username, password, tipo FROM users WHERE username = ?";
 
         if ($stmt = mysqli_prepare($link, $sql)) {
             // Bind variables to the prepared statement as parameters
@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Check if username exists, if yes then verify password
                 if (mysqli_stmt_num_rows($stmt) == 1) {
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password);
+                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password, $tipo);
                     if (mysqli_stmt_fetch($stmt)) {
                         if (password_verify($password, $hashed_password)) {
                             // Password is correct, so start a new session
@@ -62,6 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["loggedin"] = true;
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
+                            $_SESSION["tipo"] = $tipo;
 
                             // Redirect user to welcome page
                             header("location: welcome.php");
@@ -132,15 +133,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-                            <li class="nav-item dropdown open">
-                                <a class="nav-link link text-black text-primary dropdown-toggle display-4" href="#" data-toggle="dropdown-submenu" aria-expanded="true"><span class="material material-home mbr-iconfont mbr-iconfont-btn"></span>HOME</a>
-                                <div class="dropdown-menu">
-                                    <a class="text-black text-primary dropdown-item display-4" href="artistas.php">ARTISTAS<br></a>
-                                    <a class="text-black text-primary dropdown-item display-4" href="fas.php" aria-expanded="false">FÃS</a>
-                                </div>
+                            <li class="nav-item">
+                            
+                            <a class="nav-link link text-black text-primary display-4" href="index_in.php"><span class="material material-home mbr-iconfont mbr-iconfont-btn"></span>HOME</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link link text-black text-primary display-4" href="agenda.php"><span class="far fa-fw fa-calendar mbr-iconfont mbr-iconfont-btn"></span>AGENDA</a>
+                                <a class="nav-link link text-black text-primary display-4" href="agenda_in.php"><span class="far fa-fw fa-calendar mbr-iconfont mbr-iconfont-btn"></span>AGENDA</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link link text-black text-primary display-4" href="quem_somos_in.php" aria-expanded="false"><span class="material material-people mbr-iconfont mbr-iconfont-btn"></span>QUEM SOMOS</a>

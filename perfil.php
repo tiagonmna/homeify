@@ -70,7 +70,7 @@ $id = $_SESSION["id"];
                                 </div>                                 
                             </li>                             
                             <li class="nav-item"> 
-                                <a class="nav-link link text-black text-primary display-4" href="agenda.php"><span class="far fa-fw fa-calendar mbr-iconfont mbr-iconfont-btn"></span>AGENDA</a> 
+                                <a class="nav-link link text-black text-primary display-4" href="agenda_in.php"><span class="far fa-fw fa-calendar mbr-iconfont mbr-iconfont-btn"></span>AGENDA</a> 
                             </li>                             
                             <li class="nav-item"> 
                                 <a class="nav-link link text-black text-primary display-4" href="quem_somos_in.php" aria-expanded="false"><span class="material material-people mbr-iconfont mbr-iconfont-btn"></span>QUEM SOMOS</a> 

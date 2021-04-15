@@ -1,13 +1,3 @@
-<?php
-// Initialize the session
-session_start();
-
-// Check if the user is logged in, if not then redirect him to login page
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
-    exit;
-}
-?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -50,7 +40,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
-                            <li class="nav-item dropdown open">
+                        <li class="nav-item dropdown">
                                 <a class="nav-link link text-black text-primary dropdown-toggle display-4" href="#" data-toggle="dropdown-submenu" aria-expanded="true"><span class="material material-home mbr-iconfont mbr-iconfont-btn"></span>HOME</a>
                                 <div class="dropdown-menu">
                                     <a class="text-black text-primary dropdown-item display-4" href="artistas.php">ARTISTAS<br></a>
@@ -58,13 +48,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 </div>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link link text-black text-primary display-4" href="agenda.php"><span class="far fa-fw fa-calendar mbr-iconfont mbr-iconfont-btn"></span>AGENDA</a>
+                                <a class="nav-link link text-black text-primary display-4" href="agenda_in.php"><span class="far fa-fw fa-calendar mbr-iconfont mbr-iconfont-btn"></span>AGENDA</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link link text-black text-primary display-4" href="quem_somos_in.php" aria-expanded="false"><span class="material material-people mbr-iconfont mbr-iconfont-btn"></span>QUEM SOMOS</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link link text-black text-primary display-4" href="perfil.php" aria-expanded="false"><span class="fas fa-fw fa-door-open mbr-iconfont mbr-iconfont-btn"></span>PERFIL</a>
+                                <a class="nav-link link text-black text-primary display-4" href="login.php" aria-expanded="false"><span class="fas fa-fw fa-door-open mbr-iconfont mbr-iconfont-btn"></span>LOGIN</a>
                             </li>
                         </ul>
                     </div>
