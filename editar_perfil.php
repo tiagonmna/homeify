@@ -182,8 +182,28 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <div class="form-group"> 
                             <label class="mbr-text mbr-fonts-style display-7">Estilo musical favorito</label>                             
                             <select name="estilo_musical" id="estilo_musical" class="form-control <?php echo (!empty($estilo_musical_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $estilo_musical; ?>"> 
-                                <option value="Rock">Rock</option>                                 
-                                <option value="Rap">Rap</option>                                 
+                            <option value="Blues">Blues</option>
+<option value="Country">Country</option>
+<option value="Eletrónica">Eletrónica</option>
+<option value="Fado">Fado</option>
+<option value="Funk">Funk</option>
+<option value="Gospel">Gospel</option>
+<option value="Hardcore">Hardcore</option>
+<option value="Heavy Metal">Heavy Metal</option>
+<option value="Hip Hop">Hip Hop</option>
+<option value="Jazz">Jazz</option>
+<option value="MPB">MPB</option>
+<option value="Música Folclórica">Música Folclórica</option>
+<option value="Ópera">Ópera</option>
+<option value="Pop">Pop</option>
+<option value="Punk">Punk</option>
+<option value="R&B">R&B</option>
+<option value="Rap">Rap</option>
+<option value="Reggae">Reggae</option>
+<option value="Rock">Rock</option>
+<option value="Samba">Samba</option>
+<option value="Soul">Soul</option>
+                                          
                             </select>  
                             <span class="invalid-feedback"><?php echo $estilo_musical_err; ?></span> 
                         </div>                         
@@ -218,7 +238,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <span style="font-size: 1.1rem;">Contactos</span> 
                         </li>                         
                         <li class="mbr-text item-wrap"> 
-                            <span style="font-size: 1.1rem;">FAQs</span> 
+                            <a href="https://homeify.azurewebsites.net/faqs.html" class="text-white">FAQs</a> 
                         </li>                         
                     </ul>                     
                 </div>                 

@@ -62,7 +62,7 @@
             </nav>
         </section>
 
-        <section class="countdown4 cid-suEU3LUFMp mbr-fullscreen" id="countdown4-0">
+<section class="countdown4 cid-suzKEO3NJ5 mbr-fullscreen" id="countdown4-1o">
        
     <div class="container">
         <div class="row justify-content-center">
@@ -170,7 +170,7 @@
                                 <span style="font-size: 1.1rem;">Contactos</span>
                             </li>
                             <li class="mbr-text item-wrap">
-                                <span style="font-size: 1.1rem;">FAQs</span>
+                                <a href="https://homeify.azurewebsites.net/faqs.html" class="text-white">FAQs</a>
                             </li>
                         </ul>
                     </div>

@@ -200,7 +200,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <span style="font-size: 1.1rem;">Contactos</span>
                             </li>
                             <li class="mbr-text item-wrap">
-                                <span style="font-size: 1.1rem;">FAQs</span>
+                                <a href="https://homeify.azurewebsites.net/faqs.html" class="text-white">FAQs</a>
                             </li>
                         </ul>
                     </div>

@@ -1,14 +1,3 @@
-<?php
-// Initialize the session
-session_start();
-
-// Check if the user is logged in, if not then redirect him to homeify logged out page
-if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION["tipo"] !== "artista" ) {
-    header("location: countdown_in.php");
-    exit;
-}
-?>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -101,13 +90,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION
                                     Segue-nos nas redes sociais para saberes as novidades da Homeify em tempo real!</p>
                                     <div class="icons-menu row justify-content-center display-7">
                                         <div class="soc-item col-auto">
-                                            <a href="https://instagram.com/mobirise" target="_blank" class="social__link"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
+                                            <a href="https://instagram.com" target="_blank" class="social__link"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
                                         </div>
                                         <div class="soc-item col-auto">
-                                            <a href="https://twitter.com/mobirise" target="_blank" class="social__link"> <span class="mbr-iconfont socicon-twitter socicon"></span> </a>
+                                            <a href="https://twitter.com" target="_blank" class="social__link"> <span class="mbr-iconfont socicon-twitter socicon"></span> </a>
                                         </div>
                                         <div class="soc-item col-auto">
-                                            <a href="https://facebook.com/Mobirise/" target="_blank" class="social__link"> <span class="mbr-iconfont socicon socicon-facebook"></span> </a>
+                                            <a href="https://facebook.com/" target="_blank" class="social__link"> <span class="mbr-iconfont socicon socicon-facebook"></span> </a>
                                         </div>
                                     </div>
                                 </div>
@@ -115,8 +104,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION
                         </div>
                 </section>
                 <section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;">
-                    <a href="https://mobirise.site/p" style="flex: 1 1; height: 3rem; padding-left: 1rem;"></a>
-                    <p style="flex: 0 0 auto; margin:0; padding-right:1rem;">Build your own <a href="https://mobirise.site/y" style="color:#aaa;">website</a> with Mobirise</p>
+                    <p style="flex: 0 0 auto; margin:0; padding-right:1rem;"><a href="https://mobirise.site/y" style="color:#aaa;"></a> </p>
                 </section>
                 <script src="assets/web/assets/jquery/jquery.min.js"></script>
                 <script src="assets/popper/popper.min.js"></script>
@@ -194,7 +182,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION
                                     <span style="font-size: 1.1rem;">Contactos</span>
                                 </li>
                                 <li class="mbr-text item-wrap">
-                                    <span style="font-size: 1.1rem;">FAQs</span>
+                                    <a href="https://homeify.azurewebsites.net/faqs.html" class="text-white">FAQs</a>
                                 </li>
                             </ul>
                         </div>

@@ -98,8 +98,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="title col-12 col-md-9">
-                        <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Música acima de tudo</strong></h3>
-                        <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">Somos uma equipa de programadores e músicos com um interesse comum - dar voz aos músicos e fãs que não querem desligar a música só por terem de estar fechados em casa. Queres ver concertos? Nós temos a aplicação. Queres dar concertos? Nós temos o estúdio. Não queres fazer o concerto no estúdio? Nós temos equipamento de sobra.&nbsp;</h4>
+                        <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong class="text-center">Música acima de tudo</strong></h3>
+                        <h4 class="align-center display-7 mb-4 mbr-fonts-style mbr-section-subtitle text-center">Somos uma equipa de programadores e músicos com um interesse comum - dar voz aos músicos e fãs que não querem desligar a música só por terem de estar fechados em casa. Queres ver concertos? Nós temos a aplicação. Queres dar concertos? Nós temos o estúdio. Não queres fazer o concerto no estúdio? Nós temos equipamento de sobra.&nbsp;</h4>
                     </div>
                 </div>
             </div>
@@ -124,8 +124,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="title col-12 col-md-9">
-                        <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Vantagens para músicos</strong></h3>
-                        <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">qual é, meu?</h4>
+                        <h3 class="align-center display-2 mb-4 mbr-fonts-style mbr-section-title text-center"><strong>Vantagens para os artistas</strong></h3>
+                        <h4 class="align-center display-7 mb-4 mbr-fonts-style mbr-section-subtitle text-center">Entendemos que para vocês, a pandemia parou tudo. E sabemos que além do brilho no olhar e na adrenalina boa por estar a fazer o que ama, ainda precisam ganhar dinheiro. Por isso, aqui conseguem controlar o quanto ganham com base na compra de ingressos e na quantidade de visualizações. Sem algoritmos. Somos transparentes contigo!</h4>
                     </div>
                 </div>
             </div>
@@ -134,8 +134,8 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="title col-12 col-md-9">
-                        <h3 class="mbr-section-title mbr-fonts-style align-center mb-4 display-2"><strong>Vantagens para Fãs</strong></h3>
-                        <h4 class="mbr-section-subtitle align-center mbr-fonts-style mb-4 display-7">Bla bla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla blabla bla bla bla bla bla</h4>
+                        <h3 class="align-center display-2 mb-4 mbr-fonts-style mbr-section-title text-center"><strong>Vantagens para fãs</strong></h3>
+                        <h4 class="align-center display-7 mb-4 mbr-fonts-style mbr-section-subtitle text-center">Em meio à pandemia e esse novo contexto, em que há mais tempo para aproveitar o teu lar, a HomeIfy leva os concertos a ti. Aqui não há filas para comprar ingressos, não tem nenhum desconhecido a dificultar a visão do palco. O artista está pertinho de ti, bem a sua frente na tela que preferir! Não precisas se incomodar com as luzes de telemóveis a fazer stories ou com barulhos inconvenientes. Ainda pode fazer um lanchinho a aproveitar uma boa música.</h4>
                     </div>
                 </div>
             </div>
@@ -245,7 +245,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 <span style="font-size: 1.1rem;">Contactos</span>
                             </li>
                             <li class="mbr-text item-wrap">
-                                <span style="font-size: 1.1rem;">FAQs</span>
+                                <a href="https://homeify.azurewebsites.net/faqs.html" class="text-white">FAQs</a>
                             </li>
                         </ul>
                     </div>
