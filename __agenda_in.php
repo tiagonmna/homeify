@@ -2,9 +2,9 @@
 // Initialize the session
 session_start();
 
-// Check if the user is logged in, if not then redirect him to login page
+// Check if the user is logged in, if not then redirect him to agenda page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
-    header("location: login.php");
+    header("location: agenda.php");
     exit;
 }
 ?>
@@ -16,7 +16,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
         <link rel="shortcut icon" href="assets/images/homeify-121x113.png" type="image/x-icon">
         <meta name="description" content="">
-        <title>Artistas</title>
+        <title>Agenda</title>
         <link rel="stylesheet" href="assets/font-awesome-regular/../css/fontawesome.min.css">
         <link rel="stylesheet" href="assets/font-awesome-regular/css/regular.min.css">
         <link rel="stylesheet" href="assets/font-awesome-solid/../css/fontawesome.min.css">
@@ -33,7 +33,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
     </head>
     <body>
-        <section class="menu cid-s48OLK6784" once="menu" id="menu1-15">
+        <section class="menu cid-s48OLK6784" once="menu" id="menu1-t">
             <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
                 <div class="container">
                     <div class="navbar-brand">
@@ -68,11 +68,58 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </div>
             </nav>
         </section>
-        <section class="form7 cid-spVZDK9FzS" id="form7-10">
+        <section class="content2 cid-spVXaM3Uup" id="content2-u">
             <div class="container">
                 <div class="mbr-section-head">
-                    <h3 class="align-center display-5 mb-0 mbr-fonts-style mbr-section-title">Olá, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Já fazes parte da família!</h3>
-                    <p class=" mt-5 text-center"> <a href="reset-password.php" class="btn btn-secondary display-4">Mudar a tua Password</a> <button class="btn btn-secondary display-4" type="button">Sair desta conta</button> </p>
+                    <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Próximos Concertos</strong></h4>
+                    <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-5">Sabe tudo sobre o que temos na manga para os próximos meses<br></h5>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-lg-4 col-md-6 features-image item сol-12">
+                        <div class="item-wrapper">
+                            <div class="item-img">
+                                <img src="assets/images/product5.jpg" alt="" title="">
+                            </div>
+                            <div class="item-content">
+                                <h5 class="item-title mbr-fonts-style display-5">Ananás Rosa</h5>
+                                <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>Eletrónica - 20/03/2021</strong></h6>
+                                <p class="display-7 mbr-fonts-style mbr-text mt-3">Os Ananás Rosa decidiram sair de casa e vir à Rua dos Músicos meter os sintetizadores a trabalhar - só faltas tu e o teu sofá.</p>
+                            </div>
+                            <div class="mbr-section-btn item-footer mt-2">
+                                <a href="" class="btn btn-secondary d-flex display-7 item-btn" target="_blank">Saber mais...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item features-image сol-12 col-md-6 col-lg-4">
+                        <div class="item-wrapper">
+                            <div class="item-img">
+                                <img src="assets/images/product4.jpg" alt="" title="">
+                            </div>
+                            <div class="item-content">
+                                <h5 class="item-title mbr-fonts-style display-5">Chica-Loca</h5>
+                                <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>Pop-Rock - 25/04/2021</strong></h6>
+                                <p class="mbr-text mbr-fonts-style mt-3 display-7">A Chica-Loca vai estar no nosso estúdio para gravar o seu próximo álbum - e adivinha quem vai poder ouvir tudo em primeira mão?<br> </p>
+                            </div>
+                            <div class="mbr-section-btn item-footer mt-2">
+                                <a href="" class="btn btn-secondary d-flex display-7 item-btn" target="_blank">Saber mais...</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item features-image сol-12 col-md-6 col-lg-4">
+                        <div class="item-wrapper">
+                            <div class="item-img">
+                                <img src="assets/images/product3.jpg" alt="" title="">
+                            </div>
+                            <div class="item-content">
+                                <h5 class="item-title mbr-fonts-style display-5">Buedastyle</h5>
+                                <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>Hip-Hop - 13/05/2021</strong></h6>
+                                <p class="mbr-text mbr-fonts-style mt-3 display-7">Não há muito a dizer sobre os Buedastyle. Só... Têm Bué-da-Style.</p>
+                            </div>
+                            <div class="mbr-section-btn item-footer mt-2">
+                                <a href="" class="btn btn-secondary d-flex display-7 item-btn" target="_blank">Saber mais...</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

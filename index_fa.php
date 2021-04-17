@@ -77,7 +77,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION
                 <div class="justify-content-center mb-5 mt-5 row">
                     <div class="col-12 col-lg-8">
                         <h1 class="clearfix display-1 mbr-fonts-style mbr-section-title"><b>Estás em casa. Começa hoje a ouvir mais e melhor música portuguesa!</b></h1>
-                        <p class="mbr-text mbr-fonts-style display-7">Na Homeify criámos um espaço para ti e para a música que gostas. Os melhores concertos não têm de ser nas grandes salas - connosco, podes ter a experiência toda a partir do sofá da tua casa.</p>
+                        <p class="mbr-text mbr-fonts-style display-7">Na Homeify criámos um espaço para ti e para a música que gostas. Os melhores concertos não têm de ser nas grandes salas - connosco, podes ter a experiência toda a partir do sofá da tua casa. Podes ver o nosso último concerto e escrever o teu comentário<a href=https://homeify.azurewebsites.net/video_1.php> aqui!</a></p>
                     </div>
                 </div>
             </div>
@@ -274,7 +274,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true || $_SESSION
                                 <a href="https://twitter.com" target="_blank"> <span class="mbr-iconfont socicon-twitter socicon"></span> </a>
                             </div>
                             <div class="soc-item">
-                                <a href="http://instagram.com" target="_blank"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
+                                <a href="http://instagram.com/homeify_/" target="_blank"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
                             </div>
                         </div>
                     </div>

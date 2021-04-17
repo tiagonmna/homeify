@@ -91,7 +91,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                         <a href="https://twitter.com/mobirise" target="_blank"> <span class="mbr-iconfont socicon socicon-twitter"></span> </a>
                                     </div>
                                     <div class="soc-item">
-                                        <a href="https://instagram.com/mobirise" target="_blank"> <span class="mbr-iconfont socicon socicon-instagram"></span> </a>
+                                        <a href="https://instagram.com/homeify_//mobirise" target="_blank"> <span class="mbr-iconfont socicon socicon-instagram"></span> </a>
                                     </div>
                                 </div>
                             </div>
@@ -115,7 +115,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                         <a href="https://twitter.com/mobirise" target="_blank"> <span class="mbr-iconfont socicon socicon-twitter"></span> </a>
                                     </div>
                                     <div class="soc-item">
-                                        <a href="https://instagram.com/mobirise" target="_blank"> <span class="mbr-iconfont socicon socicon-instagram"></span> </a>
+                                        <a href="https://instagram.com/homeify_//mobirise" target="_blank"> <span class="mbr-iconfont socicon socicon-instagram"></span> </a>
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +139,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                         <a href="https://twitter.com/mobirise" target="_blank"> <span class="mbr-iconfont socicon socicon-twitter"></span> </a>
                                     </div>
                                     <div class="soc-item">
-                                        <a href="https://instagram.com/mobirise" target="_blank"> <span class="mbr-iconfont socicon socicon-instagram"></span> </a>
+                                        <a href="https://instagram.com/homeify_//mobirise" target="_blank"> <span class="mbr-iconfont socicon socicon-instagram"></span> </a>
                                     </div>
                                 </div>
                             </div>
@@ -202,7 +202,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 <a href="https://twitter.com" target="_blank"> <span class="mbr-iconfont socicon-twitter socicon"></span> </a>
                             </div>
                             <div class="soc-item">
-                                <a href="http://instagram.com" target="_blank"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
+                                <a href="http://instagram.com/homeify_/" target="_blank"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
                             </div>
                         </div>
                     </div>

@@ -40,7 +40,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
     </head>
     <body>
-        <section class="menu cid-s48OLK6784" once="menu" id="menu1-h">
+    <section class="menu cid-s48OLK6784" once="menu" id="menu1-h">
             <nav class="navbar navbar-dropdown navbar-fixed-top navbar-expand-lg">
                 <div class="container">
                     <div class="navbar-brand">
@@ -60,10 +60,6 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                             <li class="nav-item">
                             
                             <a class="nav-link link text-black text-primary display-4" href="index_in.php"><span class="material material-home mbr-iconfont mbr-iconfont-btn"></span>HOME</a>
-                            </li>
-                                    <a class="text-black text-primary dropdown-item display-4" href="artistas.php">ARTISTAS<br></a>
-                                    <a class="text-black text-primary dropdown-item display-4" href="fas.php" aria-expanded="false">FÃS</a>
-                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link link text-black text-primary display-4" href="agenda_in.php"><span class="far fa-fw fa-calendar mbr-iconfont mbr-iconfont-btn"></span>AGENDA</a>
@@ -85,7 +81,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-8">
                         <h1 class="mbr-section-title mbr-fonts-style mb-3 display-1"><strong>E SE TE DESSEMOS MÚSICA EM CASA?</strong></h1>
-                        <p class="mbr-text mbr-fonts-style display-7">Na Homeify criámos um espaço para ti e para a música que gostas. Os melhores concertos não têm de ser nas grandes salas - connosco, podes ter a experiência toda a partir do sofá da tua casa.</p>
+                        <p class="mbr-text mbr-fonts-style display-7">Na Homeify criámos um espaço para ti e para a música que gostas. Os melhores concertos não têm de ser nas grandes salas - connosco, podes ter a experiência toda a partir do sofá da tua casa. Podes ver o nosso último concerto e escrever o teu comentário<a href=https://homeify.azurewebsites.net/video_1.php> aqui!</a></p>
                         <div class="mbr-section-btn mt-3">
                             <a class="btn btn-secondary display-4" href="artistas.php">ARTISTAS</a> 
                             <a class="btn btn-secondary display-4" href="fas.php">FÃS</a>
@@ -286,7 +282,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                                 <a href="https://twitter.com" target="_blank"> <span class="mbr-iconfont socicon-twitter socicon"></span> </a>
                             </div>
                             <div class="soc-item">
-                                <a href="http://instagram.com" target="_blank"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
+                                <a href="http://instagram.com/homeify_/" target="_blank"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
                             </div>
                         </div>
                     </div>

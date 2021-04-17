@@ -263,7 +263,7 @@
                                 <a href="https://twitter.com" target="_blank"> <span class="mbr-iconfont socicon-twitter socicon"></span> </a>
                             </div>
                             <div class="soc-item">
-                                <a href="http://instagram.com" target="_blank"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
+                                <a href="http://instagram.com/homeify_/" target="_blank"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
                             </div>
                         </div>
                     </div>

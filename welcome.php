@@ -134,7 +134,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <div class="mbr-section-head">
                     <h3 class="align-center display-5 mb-0 mbr-fonts-style mbr-section-title">Olá, <b><?php echo htmlspecialchars($_SESSION["username"]); ?></b>. Já fazes parte da família!</h3>
                     <h3 class="align-center display-5 mb-5 mbr-fonts-style mbr-section-title mt-5 pb-auto pt-5">Seria espetacular se nos ajudasses a tornar este site melhor ao <a href="https://homeify.azurewebsites.net/editar_perfil.php" class="text-primary">preencher os teus dados de utilizador</a>!</h3>
-                    <p class=" mt-5 text-center"> <a href="reset-password.php" class="btn btn-secondary display-4">Mudar a tua Password</a> <button class="btn btn-secondary display-4" type="button">Sair desta conta</button> </p>
+                    <p class=" mt-5 text-center"> <a href="reset-password.php" class="btn btn-secondary display-4">Mudar a tua Password</a> <a class="btn btn-secondary display-4" href="logout.php">Logout</a> 
                 </div>
             </div>
         </section>
@@ -192,7 +192,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                 <a href="https://twitter.com" target="_blank"> <span class="mbr-iconfont socicon-twitter socicon"></span> </a>
                             </div>
                             <div class="soc-item">
-                                <a href="http://instagram.com" target="_blank"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
+                                <a href="http://instagram.com/homeify_/" target="_blank"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
                             </div>
                         </div>
                     </div>

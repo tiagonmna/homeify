@@ -12,7 +12,7 @@ if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
 require_once "config.php";
 
 // Define variables and initialize with empty values
-$username = $password = $tipo = "";
+$username = $password = $tipo = $nome = "";
 $username_err = $password_err = $login_err = $tipo_err = "";
 
 // Processing form data when form is submitted
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Validate credentials
     if (empty($username_err) && empty($password_err)) {
         // Prepare a select statement
-        $sql = "SELECT id, username, password, tipo FROM users WHERE username = ?";
+        $sql = "SELECT id, username, password, tipo, nome FROM users WHERE username = ?";
 
         if ($stmt = mysqli_prepare($link, $sql)) {
             // Bind variables to the prepared statement as parameters
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             // Set parameters
             $param_username = $username;
-
+            
             // Attempt to execute the prepared statement
             if (mysqli_stmt_execute($stmt)) {
                 // Store result
@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 // Check if username exists, if yes then verify password
                 if (mysqli_stmt_num_rows($stmt) == 1) {
                     // Bind result variables
-                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password, $tipo);
+                    mysqli_stmt_bind_result($stmt, $id, $username, $hashed_password, $tipo, $nome);
                     if (mysqli_stmt_fetch($stmt)) {
                         if (password_verify($password, $hashed_password)) {
                             // Password is correct, so start a new session
@@ -63,6 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             $_SESSION["id"] = $id;
                             $_SESSION["username"] = $username;
                             $_SESSION["tipo"] = $tipo;
+                            $_SESSION["nome"] = $nome;
 
                             // Redirect user to welcome page
                             header("location: welcome.php");
@@ -134,8 +135,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
                             <li class="nav-item">
-                            
-                            <a class="nav-link link text-black text-primary display-4" href="index_in.php"><span class="material material-home mbr-iconfont mbr-iconfont-btn"></span>HOME</a>
+                                <a class="nav-link link text-black text-primary display-4" href="index_in.php"><span class="material material-home mbr-iconfont mbr-iconfont-btn"></span>HOME</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link link text-black text-primary display-4" href="agenda_in.php"><span class="far fa-fw fa-calendar mbr-iconfont mbr-iconfont-btn"></span>AGENDA</a>
@@ -158,8 +158,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 <div class="row justify-content-center mt-4">
                     <div class="col-lg-5 ml-auto mr-auto wrapper">
-                        <h2>Login</h2>
-                        <p>Por favor preenche as credenciais de Login</p>
+                        <p class="display-7 mbr-fonts-style mbr-text text-left">Por favor preenche as credenciais de Login:</p>
                         <?php
                     if (!empty($login_err)) {
                         echo '<div class="alert alert-danger">' . $login_err . '</div>';
@@ -167,12 +166,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     ?>
                         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                             <div class="form-group">
-                                <label>Nome de Utilizador</label>
+                                <label class="mbr-text mbr-fonts-style display-7">Nome de Utilizador</label>
                                 <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                                 <span class="invalid-feedback"><?php echo $username_err; ?></span>
                             </div>
                             <div class="form-group">
-                                <label>Palavra Passe</label>
+                                <label class="mbr-text mbr-fonts-style display-7">Palavra Passe</label>
                                 <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
                                 <span class="invalid-feedback"><?php echo $password_err; ?></span>
                             </div>
@@ -241,7 +240,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                 <a href="https://twitter.com" target="_blank"> <span class="mbr-iconfont socicon-twitter socicon"></span> </a>
                             </div>
                             <div class="soc-item">
-                                <a href="http://instagram.com" target="_blank"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
+                                <a href="http://instagram.com/homeify_/" target="_blank"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
                             </div>
                         </div>
                     </div>

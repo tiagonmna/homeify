@@ -2,7 +2,7 @@
 // Initialize the session
 session_start();
 
-// Check if the user is logged in, if not then redirect him to agenda page
+// Check if the user is logged in, if not then redirect him to homeify logged out page
 if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
     header("location: agenda.php");
     exit;
@@ -31,6 +31,14 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
         <link rel="stylesheet" href="assets/theme/css/style.css">
         <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
         <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+        <link rel="stylesheet" href="assets/tether/tether.min.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-grid.min.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap-reboot.min.css">
+        <link rel="stylesheet" href="assets/socicon/css/styles.css">
+        <link rel="stylesheet" href="assets/theme/css/style.css">
+        <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css">
+        <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
     </head>
     <body>
         <section class="menu cid-s48OLK6784" once="menu" id="menu1-t">
@@ -51,8 +59,7 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav nav-dropdown nav-right" data-app-modern-menu="true">
                             <li class="nav-item">
-                            
-                            <a class="nav-link link text-black text-primary display-4" href="index_in.php"><span class="material material-home mbr-iconfont mbr-iconfont-btn"></span>HOME</a>
+                                <a class="nav-link link text-black text-primary display-4" href="index_in.php"><span class="material material-home mbr-iconfont mbr-iconfont-btn"></span>HOME</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link link text-black text-primary display-4" href="agenda_in.php"><span class="far fa-fw fa-calendar mbr-iconfont mbr-iconfont-btn"></span>AGENDA</a>
@@ -68,130 +75,174 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                 </div>
             </nav>
         </section>
-        <section class="content2 cid-spVXaM3Uup" id="content2-u">
+        <div>
             <div class="container">
-                <div class="mbr-section-head">
-                    <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Próximos Concertos</strong></h4>
-                    <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-5">Sabe tudo sobre o que temos na manga para os próximos meses<br></h5>
-                </div>
-                <div class="row mt-4">
-                    <div class="col-lg-4 col-md-6 features-image item сol-12">
-                        <div class="item-wrapper">
-                            <div class="item-img">
-                                <img src="assets/images/product5.jpg" alt="" title="">
-                            </div>
-                            <div class="item-content">
-                                <h5 class="item-title mbr-fonts-style display-5">Ananás Rosa</h5>
-                                <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>Eletrónica - 20/03/2021</strong></h6>
-                                <p class="display-7 mbr-fonts-style mbr-text mt-3">Os Ananás Rosa decidiram sair de casa e vir à Rua dos Músicos meter os sintetizadores a trabalhar - só faltas tu e o teu sofá.</p>
-                            </div>
-                            <div class="mbr-section-btn item-footer mt-2">
-                                <a href="" class="btn btn-secondary d-flex display-7 item-btn" target="_blank">Saber mais...</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item features-image сol-12 col-md-6 col-lg-4">
-                        <div class="item-wrapper">
-                            <div class="item-img">
-                                <img src="assets/images/product4.jpg" alt="" title="">
-                            </div>
-                            <div class="item-content">
-                                <h5 class="item-title mbr-fonts-style display-5">Chica-Loca</h5>
-                                <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>Pop-Rock - 25/04/2021</strong></h6>
-                                <p class="mbr-text mbr-fonts-style mt-3 display-7">A Chica-Loca vai estar no nosso estúdio para gravar o seu próximo álbum - e adivinha quem vai poder ouvir tudo em primeira mão?<br> </p>
-                            </div>
-                            <div class="mbr-section-btn item-footer mt-2">
-                                <a href="" class="btn btn-secondary d-flex display-7 item-btn" target="_blank">Saber mais...</a>
+                <section class=" cid-suEU3LUFMp countdown4 mbr-fullscreen mr-5 mt-n5" id="countdown4-0">
+                    <div class="container">
+                        <img src="assets/images/mbr.jpg" class="h-auto mb-4 mt-n5 mw-100 pb-0 position-absolute pt-0 rounded-0 vw-100">
+                        <div class="mbr-overlay" style="opacity: 0.0; background-color: rgb(255, 255, 255);"></div>
+                        <div class="align-center container mb-2 mt-5">
+                            <div class=" justify-content-center mt-1 pt-5 row text-light">
+                                <div class="col-lg-8">
+                                    <h3 class="mbr-section-title mb-5 align-center mbr-fonts-style display-2"> <strong>Está quase!</strong></h3>
+                                    <div class="countdown-cont align-center mb-5">
+                                        <div class="daysCountdown col-xs-3 col-sm-3 col-md-3" title="Dias"></div>
+                                        <div class="hoursCountdown col-xs-3 col-sm-3 col-md-3" title="Horas"></div>
+                                        <div class="minutesCountdown col-xs-3 col-sm-3 col-md-3" title="Minutos"></div>
+                                        <div class="secondsCountdown col-xs-3 col-sm-3 col-md-3" title="Segundos"></div>
+                                        <div class="countdown" data-due-date="2021/06/15"></div>
+                                    </div>
+                                    <p class="mbr-text mb-5 align-center mbr-fonts-style display-7">Segue-nos nas redes sociais para saberes <br>as novidades da Homeify em tempo real!</p>
+                                    <div class="icons-menu row justify-content-center display-7">
+                                        <div class="soc-item col-auto">
+                                            <a href="https://instagram.com/homeify_/" target="_blank" class="social__link"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
+                                        </div>
+                                        <div class="soc-item col-auto">
+                                            <a href="https://twitter.com" target="_blank" class="social__link"> <span class="mbr-iconfont socicon-twitter socicon"></span> </a>
+                                        </div>
+                                        <div class="soc-item col-auto">
+                                            <a href="https://facebook.com/" target="_blank" class="social__link"> <span class="mbr-iconfont socicon socicon-facebook"></span> </a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="item features-image сol-12 col-md-6 col-lg-4">
-                        <div class="item-wrapper">
-                            <div class="item-img">
-                                <img src="assets/images/product3.jpg" alt="" title="">
-                            </div>
-                            <div class="item-content">
-                                <h5 class="item-title mbr-fonts-style display-5">Buedastyle</h5>
-                                <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>Hip-Hop - 13/05/2021</strong></h6>
-                                <p class="mbr-text mbr-fonts-style mt-3 display-7">Não há muito a dizer sobre os Buedastyle. Só... Têm Bué-da-Style.</p>
-                            </div>
-                            <div class="mbr-section-btn item-footer mt-2">
-                                <a href="" class="btn btn-secondary d-flex display-7 item-btn" target="_blank">Saber mais...</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </section>
+                <section style="background-color: #fff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif; color:#aaa; font-size:12px; padding: 0; align-items: center; display: flex;">
+                    <p style="flex: 0 0 auto; margin:0; padding-right:1rem;"><a href="https://mobirise.site/y" style="color:#aaa;"></a> </p>
+                </section>
+                <script src="assets/web/assets/jquery/jquery.min.js"></script>
+                <script src="assets/popper/popper.min.js"></script>
+                <script src="assets/tether/tether.min.js"></script>
+                <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+                <script src="assets/smoothscroll/smooth-scroll.js"></script>
+                <script src="assets/countdown/jquery.countdown.min.js"></script>
+                <script src="assets/theme/js/script.js"></script>
             </div>
-        </section>
-        <section id="top-1" hidden>
-            <a href="https://mobirise.site"></a>
-        </section>
-        <section class="footer1 cid-spVNvGeVDB" once="footers" id="footer1-y">
-            <div class="container">
-                <div class="row mbr-white">
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"> <strong>Ajuda</strong> </h5>
-                        <ul class="list mbr-fonts-style display-4">
-                            <li class="mbr-text item-wrap">
-                                <span style="font-size: 1.1rem;">Contactos</span>
-                            </li>
-                            <li class="mbr-text item-wrap">
-                                <a href="https://homeify.azurewebsites.net/faqs.html" class="text-white">FAQs</a>
-                            </li>
-                        </ul>
+            <section class="content2 cid-spVXaM3Uup" id="content2-u">
+                <div class="container">
+                    <div class="mbr-section-head">
+                        <h4 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2"><strong>Próximos Concertos</strong></h4>
+                        <h5 class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-5">Sabe tudo sobre o que temos na manga para os próximos meses<br></h5>
                     </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong>Equipamento</strong></h5>
-                        <ul class="list mbr-fonts-style display-4">
-                            <li class="mbr-text item-wrap">
-                                <span style="font-size: 1.1rem;">Galeria</span>
-                            </li>
-                            <li class="mbr-text item-wrap">
-                                <span style="font-size: 1.1rem;">Preçário<br></span>
-                                <br>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong>Agendamento</strong></h5>
-                        <ul class="list mbr-fonts-style display-4">
-                            <li class="mbr-text item-wrap">Estúdio</li>
-                            <li class="mbr-text item-wrap">Aluguer de Equipamento</li>
-                            <li class="item-wrap mbr-text" href="https://homeify.azurewebsites.net/termos.html">
-                                <a href="https://homeify.azurewebsites.net/termos.html" class="text-white">Termos de Utilização</a>
-                            </li>
-                            <li class="mbr-text item-wrap">
-                                <br>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3">
-                        <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"></h5>
-                        <p class="mbr-text mbr-fonts-style mb-4 display-4"></p>
-                        <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-7"> <strong>Social</strong> </h5>
-                        <div class="social-row display-7">
-                            <div class="soc-item">
-                                <a href="http://facebook.com" target="_blank"> <span class="mbr-iconfont socicon-facebook socicon"></span> </a>
+                    <div class="row mt-4">
+                        <div class="col-lg-4 col-md-6 features-image item сol-12">
+                            <div class="item-wrapper">
+                                <div class="item-img">
+                                    <img src="assets/images/product5.jpg" alt="" title="">
+                                </div>
+                                <div class="item-content">
+                                    <h5 class="item-title mbr-fonts-style display-5">Ananás Rosa</h5>
+                                    <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>Eletrónica - 20/03/2021</strong></h6>
+                                    <p class="display-7 mbr-fonts-style mbr-text mt-3">Os Ananás Rosa decidiram sair de casa e vir à Rua dos Músicos meter os sintetizadores a trabalhar - só faltas tu e o teu sofá.</p>
+                                </div>
+                                <div class="mbr-section-btn item-footer mt-2">
+                                    <a href="" class="btn btn-secondary d-flex display-7 item-btn" target="_blank">Saber mais...</a>
+                                </div>
                             </div>
-                            <div class="soc-item">
-                                <a href="https://twitter.com" target="_blank"> <span class="mbr-iconfont socicon-twitter socicon"></span> </a>
+                        </div>
+                        <div class="item features-image сol-12 col-md-6 col-lg-4">
+                            <div class="item-wrapper">
+                                <div class="item-img">
+                                    <img src="assets/images/product4.jpg" alt="" title="">
+                                </div>
+                                <div class="item-content">
+                                    <h5 class="item-title mbr-fonts-style display-5">Chica-Loca</h5>
+                                    <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>Pop-Rock - 25/04/2021</strong></h6>
+                                    <p class="mbr-text mbr-fonts-style mt-3 display-7">A Chica-Loca vai estar no nosso estúdio para gravar o seu próximo álbum - e adivinha quem vai poder ouvir tudo em primeira mão?<br> </p>
+                                </div>
+                                <div class="mbr-section-btn item-footer mt-2">
+                                    <a href="" class="btn btn-secondary d-flex display-7 item-btn" target="_blank">Saber mais...</a>
+                                </div>
                             </div>
-                            <div class="soc-item">
-                                <a href="http://instagram.com" target="_blank"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
+                        </div>
+                        <div class="item features-image сol-12 col-md-6 col-lg-4">
+                            <div class="item-wrapper">
+                                <div class="item-img">
+                                    <img src="assets/images/product3.jpg" alt="" title="">
+                                </div>
+                                <div class="item-content">
+                                    <h5 class="item-title mbr-fonts-style display-5">Buedastyle</h5>
+                                    <h6 class="item-subtitle mbr-fonts-style mt-1 display-7"><strong>Hip-Hop - 13/05/2021</strong></h6>
+                                    <p class="mbr-text mbr-fonts-style mt-3 display-7">Não há muito a dizer sobre os Buedastyle. Só... Têm Bué-da-Style.</p>
+                                </div>
+                                <div class="mbr-section-btn item-footer mt-2">
+                                    <a href="" class="btn btn-secondary d-flex display-7 item-btn" target="_blank">Saber mais...</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <script src="assets/web/assets/jquery/jquery.min.js"></script>
-        <script src="assets/popper/popper.min.js"></script>
-        <script src="assets/tether/tether.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/smoothscroll/smooth-scroll.js"></script>
-        <script src="assets/dropdown/js/nav-dropdown.js"></script>
-        <script src="assets/dropdown/js/navbar-dropdown.js"></script>
-        <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
-        <script src="assets/theme/js/script.js"></script>
+            </section>
+            <section id="top-1" hidden>
+                <a href="https://mobirise.site"></a>
+            </section>
+            <section class="cid-spVNvGeVDB footer1" once="footers" id="footer1-y">
+                <div class="container">
+                    <div class="row mbr-white">
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"> <strong>Ajuda</strong> </h5>
+                            <ul class="list mbr-fonts-style display-4">
+                                <li class="mbr-text item-wrap">
+                                    <span style="font-size: 1.1rem;">Contactos</span>
+                                </li>
+                                <li class="mbr-text item-wrap">
+                                    <a href="https://homeify.azurewebsites.net/faqs.html" class="text-white">FAQs</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong>Equipamento</strong></h5>
+                            <ul class="list mbr-fonts-style display-4">
+                                <li class="mbr-text item-wrap">
+                                    <span style="font-size: 1.1rem;">Galeria</span>
+                                </li>
+                                <li class="mbr-text item-wrap">
+                                    <span style="font-size: 1.1rem;">Preçário<br></span>
+                                    <br>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"><strong>Agendamento</strong></h5>
+                            <ul class="list mbr-fonts-style display-4">
+                                <li class="mbr-text item-wrap">Estúdio</li>
+                                <li class="mbr-text item-wrap">Aluguer de Equipamento</li>
+                                <li class="item-wrap mbr-text" href="https://homeify.azurewebsites.net/termos.html">
+                                    <a href="https://homeify.azurewebsites.net/termos.html" class="text-white">Termos de Utilização</a>
+                                </li>
+                                <li class="mbr-text item-wrap">
+                                    <br>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <h5 class="mbr-section-subtitle mbr-fonts-style mb-2 display-7"></h5>
+                            <p class="mbr-text mbr-fonts-style mb-4 display-4"></p>
+                            <h5 class="mbr-section-subtitle mbr-fonts-style mb-3 display-7"> <strong>Social</strong> </h5>
+                            <div class="social-row display-7">
+                                <div class="soc-item">
+                                    <a href="http://facebook.com" target="_blank"> <span class="mbr-iconfont socicon-facebook socicon"></span> </a>
+                                </div>
+                                <div class="soc-item">
+                                    <a href="https://twitter.com" target="_blank"> <span class="mbr-iconfont socicon-twitter socicon"></span> </a>
+                                </div>
+                                <div class="soc-item">
+                                    <a href="http://instagram.com/homeify_/" target="_blank"> <span class="mbr-iconfont socicon-instagram socicon"></span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <script src="assets/web/assets/jquery/jquery.min.js"></script>
+            <script src="assets/popper/popper.min.js"></script>
+            <script src="assets/tether/tether.min.js"></script>
+            <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+            <script src="assets/smoothscroll/smooth-scroll.js"></script>
+            <script src="assets/dropdown/js/nav-dropdown.js"></script>
+            <script src="assets/dropdown/js/navbar-dropdown.js"></script>
+            <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
+            <script src="assets/theme/js/script.js"></script>
     </body>
 </html>
