@@ -108,6 +108,7 @@ if (isset($_GET['page_id'])) {
 <div class="comment_header">
     <span class="total"><?=$comments_info['total_comments']?> comments</span>
     <a href="#" class="write_comment_btn" data-comment-id="-1">Write Comment</a>
+    
 </div>
 
 <?=show_write_comment_form()?>

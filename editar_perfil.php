@@ -83,11 +83,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
             if (mysqli_query($link, $sql)) {
                 echo "Record updated successfully";
-                header("location: welcome.php");
+                session_destroy();
+                header("location: login.php");
               } else {
                 echo "Error updating record: " . mysqli_error($link);
               }
-
               header("location: login.php");
             // Close statement
             mysqli_stmt_close($stmt);

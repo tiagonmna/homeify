@@ -104,15 +104,15 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                             </div>
                             <div class="content-wrap">
                                 <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5"> <strong>Catarina Ramos</strong> </h5>
-                                <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4"> <strong>Cenas</strong> </h6>
+                                <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4"> <strong>Junior Cloud Engineer</strong> </h6>
                                 <p class="card-text mbr-fonts-style align-center display-7">
-                                cenas cenas cenas cenas cenas cenas cenas</p>
+                                "Cabe em mim todos os sonhos do mundo", Fernando Pessoa. Não usaria melhores palavras para me descrever. Sou uma pessoa ambiciosa, lutadora e carismática. Integro-me em qualquer meio e gosto de ajudar o outro!</p>
                                 <div class="social-row display-7">
                                     <div class="soc-item">
-                                        <a href="https://www.facebook.com/Mobirise/" target="_blank"> <span class="mbr-iconfont socicon socicon-facebook"></span> </a>
+                                        <a href="https://www.facebook.com/" target="_blank"> <span class="mbr-iconfont socicon socicon-facebook"></span> </a>
                                     </div>
                                     <div class="soc-item">
-                                        <a href="https://twitter.com/mobirise" target="_blank"> <span class="mbr-iconfont socicon socicon-twitter"></span> </a>
+                                        <a href="https://twitter.com/" target="_blank"> <span class="mbr-iconfont socicon socicon-twitter"></span> </a>
                                     </div>
                                     <div class="soc-item">
                                         <a href="https://instagram.com/homeify_//mobirise" target="_blank"> <span class="mbr-iconfont socicon socicon-instagram"></span> </a>
@@ -124,13 +124,13 @@ if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
                     <div class="col-sm-6 col-lg-4">
                         <div class="card-wrap">
                             <div class="image-wrap">
-                                <img src="assets/images/team3.jpg">
+                                <img src="assets/images/giovanna.jpg">
                             </div>
                             <div class="content-wrap">
-                                <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5"> <strong>Giovanna Damasceno</strong> </h5>
-                                <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4"> <strong>Cenas</strong> </h6>
+                                <h5 class="mbr-section-title card-title mbr-fonts-style align-center m-0 display-5"> <strong>Giovanna Damasceno</strong></h5>
+                                <h6 class="mbr-role mbr-fonts-style align-center mb-3 display-4"> <strong> Junior Cloud Engineer</strong> </h6>
                                 <p class="card-text mbr-fonts-style align-center display-7">
-                                cenas cenas cenas cenas cenas cenas cenas </p>
+                                Fã de bons negócios e música boa </p>
                                 <div class="social-row display-7">
                                     <div class="soc-item">
                                         <a href="https://www.facebook.com/Mobirise/" target="_blank"> <span class="mbr-iconfont socicon socicon-facebook"></span> </a>
